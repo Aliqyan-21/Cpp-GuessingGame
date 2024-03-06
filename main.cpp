@@ -118,10 +118,8 @@ void GameLoop(std::string &mode) {
       medium();
     } else if (mode == "hard") {
       hard();
-    } else {
-      std::cout << "Not a valid mode input, modes = 'easy, medium, hard'"
-                << std::endl;
     }
+
     while (true) {
       std::cout << "Do you want to play again[y/n]: ";
       std::cin >> playagain;
@@ -151,6 +149,14 @@ int main(int argc, char *argv[]) {
   }
 
   std::string mode = argv[1];
+
+  if (mode != "easy" || mode != "medium" || mode != "hard") {
+    std::cout << "Not a valid mode!" << std::endl;
+    while (mode != "easy" && mode != "medium" && mode != "hard") {
+      std::cout << "Enter mode here now[easy, medium, hard]: ";
+      std::cin >> mode;
+    }
+  }
 
   GameLoop(mode);
 
