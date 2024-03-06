@@ -1,6 +1,6 @@
 ## Guessing Game programmed in C++
 
-## Fearure
+## Feature
 
 It has 3 difficulties - `easy` `medium` and `hard` that you can input while running the code.
 
