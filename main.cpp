@@ -109,16 +109,8 @@ auto hard = []() {
   }
 };
 
-int main(int argc, char *argv[]) {
-  if (argc == 1) {
-    std::cout << "Usage: ./main mode" << std::endl;
-    std::cout << "Mode = easy, medium, hard" << std::endl;
-    exit(1);
-  }
-
-  std::string mode = argv[1];
+void GameLoop(std::string &mode) {
   char playagain;
-
   while (true) {
     if (mode == "easy") {
       easy();
@@ -149,6 +141,18 @@ int main(int argc, char *argv[]) {
       continue;
     }
   }
+}
+
+int main(int argc, char *argv[]) {
+  if (argc == 1) {
+    std::cout << "Usage: ./main mode" << std::endl;
+    std::cout << "Mode = easy, medium, hard" << std::endl;
+    exit(1);
+  }
+
+  std::string mode = argv[1];
+
+  GameLoop(mode);
 
   return 0;
 }
