@@ -1,0 +1,14 @@
+$ include "seed7_05.s7i";
+
+const proc: usage is func
+  begin
+    if length(argv(PROGRAM)) < 1 then
+      writeln("Usage: " <&  name(PROGRAM) <& " <mode[easy, medium, hard]>");
+      exit(1);
+    end if;
+  end func;
+
+const proc: main is func
+begin
+  usage();
+end func;
