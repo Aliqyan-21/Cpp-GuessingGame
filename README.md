@@ -11,4 +11,4 @@ Implemented in different langauges.
 - [x] Cpp
 - [x] Go
 - [x] PASCAL
-- [ ] Seed7
+- [x] Seed7
