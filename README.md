@@ -10,4 +10,4 @@ Implemented in different langauges.
 > Languages
 - [x] Cpp
 - [x] Go
-- [ ] PASCAL
+- [x] PASCAL
