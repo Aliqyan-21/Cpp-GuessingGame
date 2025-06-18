@@ -1,23 +1,33 @@
 program Main;
 
-procedure game();
+{ returns random number between a and b }
+function getRand(a, b: smallInt): smallInt;
 begin
-  // todo: implement game function
-end
-
-procedure usage();
-begin
-  writeln('Usage: ./main <mode[easy, medium, hard]>');
-  halt(1);
+  randomize;
+  getRand := random(b - a + 1) + a;
 end;
 
-var
-  mode: string;
-
+{ usage infor. }
+procedure usage();
 begin
   if ParamCount < 1 then
-    usage();
+  begin
+    writeln('Usage: ./main <mode[easy, medium, hard]>');
+    halt(1);
+  end
+end;
 
+{ main game loop }
+procedure game();
+var randNum: smallInt;
+begin
+  // todo: implement game function
+end;
+
+{ entry point }
+var
+  mode: string;
+begin
+  usage();
   mode := ParamStr(1);
-  game(mode);
 end.
