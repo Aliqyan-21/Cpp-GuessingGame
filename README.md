@@ -12,3 +12,4 @@ Implemented in different langauges.
 - [x] Go
 - [x] PASCAL
 - [x] Seed7
+- [x] Nim
